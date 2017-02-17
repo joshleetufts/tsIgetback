@@ -152,6 +152,7 @@ export async function handleVerify(req: express.Request, res: express.Response):
             res.redirect('/login');
         }
     });
+    successResponse(res); 
 }
 
 export async function handleSubscribe(req: express.Request,
