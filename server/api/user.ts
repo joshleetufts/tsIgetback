@@ -149,10 +149,9 @@ export async function handleVerify(req: express.Request, res: express.Response):
         },
         right: async rec => {
             await db.verifyUser({email: rec.email})
-            res.redirect('/login');
+            successResponse(res); 
         }
     });
-    successResponse(res); 
 }
 
 export async function handleSubscribe(req: express.Request,
